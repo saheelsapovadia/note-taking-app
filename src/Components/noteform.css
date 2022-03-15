@@ -1,0 +1,97 @@
+.note-form-container {
+  width: 60%;
+  margin: 10px auto;
+}
+.note-form {
+  display: flex;
+  flex-direction: column;
+}
+.note-form-title {
+  font-family: "Lobster", cursive;
+  letter-spacing: 0.07em;
+  font-size: 45px;
+}
+.note-field {
+  display: flex;
+  margin: 10px;
+}
+.note-field label {
+  width: 30%;
+}
+.note-field input,
+textarea {
+  width: 100%;
+}
+.note-field input[type="text"],
+textarea {
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.note-field input[type="text"]:focus,
+textarea:focus {
+  border-color: #ff9f1c;
+  box-shadow: 0 0 8px 0 #ff9f1c;
+}
+
+.note-field div {
+  width: 100%;
+  justify-items: start;
+}
+.note-field textarea {
+  height: 150px;
+}
+.note-btns {
+  display: flex;
+  justify-content: center;
+}
+.note-add-btn {
+  /* width: 100px; */
+  align-self: center;
+  margin-right: 10px;
+  border: none;
+  border: 1px solid black;
+  border-radius: 90px;
+  padding: 10px 35px;
+  background-color: #ff9f1c;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* line-height: 50px; */
+  text-align: center;
+}
+.note-add-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px #ff9f1c;
+}
+.note-add-btn:active {
+  transform: translateY(-0.5px);
+  box-shadow: 0 5px 10px #ff9f1c;
+}
+.note-plus-icon {
+  background-color: #ff9f1c;
+  width: 15px;
+}
+.note-update-cancel {
+  cursor: pointer;
+  text-decoration: underline;
+  align-self: center;
+  margin-left: 5px;
+  color: rgb(218, 39, 39);
+}
+.error {
+  color: red;
+  font-size: 14px;
+}
