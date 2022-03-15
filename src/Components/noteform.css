@@ -56,21 +56,16 @@ textarea:focus {
   align-self: center;
   margin-right: 10px;
   border: none;
-  border: 1px solid black;
   border-radius: 90px;
   padding: 10px 35px;
   background-color: #ff9f1c;
   text-decoration: none;
-  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-  display: inline-block;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* line-height: 50px; */
-  text-align: center;
+  font-size: 20px;
 }
 .note-add-btn:hover {
   transform: translateY(-1px);
@@ -83,6 +78,7 @@ textarea:focus {
 .note-plus-icon {
   background-color: #ff9f1c;
   width: 15px;
+  margin-right: 5px;
 }
 .note-update-cancel {
   cursor: pointer;

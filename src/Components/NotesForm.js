@@ -22,7 +22,6 @@ const NotesForm = ({
       setContent("");
     }
   }, [mode]);
-  const [alertText, setAlertText] = useState("");
 
   const validateInput = () => {
     let Title = false;
@@ -33,18 +32,14 @@ const NotesForm = ({
     if (Title && !Content) {
       setTitleError("Title cannot be empty");
       alertMessage = "Title";
-      // alert(`${alertMessage}` + ` cannot be empty!`);
     } else if (!Title && Content) {
       alertMessage = "Content";
       setContentError("Content cannot be empty");
-      // alert(`${alertMessage}` + ` cannot be empty!`);
     } else if (Title && Content) {
       alertMessage = "Title and Content";
       setTitleError("Title cannot be empty");
       setContentError("Content cannot be empty");
-      // alert(`${alertMessage}` + ` cannot be empty!`);
     }
-
     return !Title && !Content ? true : false;
   };
 
@@ -67,12 +62,9 @@ const NotesForm = ({
   }, [content]);
   return (
     <div className="note-form-container">
-      {mode == "Add" ? (
-        <h1 className="note-form-title">Add Note</h1>
-      ) : (
-        <h1 className="note-form-title">Update Note</h1>
-      )}
-
+      <h1 className="note-form-title">
+        {mode == "Add" ? "Add Note" : "Update Note"}
+      </h1>
       <form className="note-form">
         <div className="note-field">
           <label>Title</label>
