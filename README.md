@@ -28,9 +28,10 @@ Tools used for development are-
 ## 🔎 Detailed Implementation
 
 1. All the project level state management and state updation is written in <b>App.js</b>
-   1.1 notebook - Contains the array of notes
-   1.2 addNote() - Adds new note to the notebook array
-   1.3 updateNote() - Updates the note at the given index/id
+
+   - notebook - Contains the array of notes
+   - addNote() - Adds new note to the notebook array
+   - updateNote() - Updates the note at the given index/id
 
 2. App.js contains two major Containers/Components - <b>NotesForm</b> and <b>Notebook</b>
 3. NotesForm is responsible with capturing the input from the user and pass it up to it's parent component
