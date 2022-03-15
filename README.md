@@ -38,7 +38,8 @@ Tools used for development are-
 
 <div style="display:flex;flex-direction:column;align-items:center; justify-content:center;">
 <img src="public/Phera.drawio.png" />
-<b>☝ Component Structure</b></div>
+</div>
+<b style="margin-left:200px">☝ Component Structure</b>
 
 ### NotesForm
 
