@@ -4,7 +4,11 @@ import "./notebook.css";
 const Notebook = ({ notebook, updateNoteMode }) => {
   return (
     <div>
-      <h1 className="notebook-title">My Notebook</h1>
+      {notebook.length > 0 ? (
+        <h1 className="notebook-title">My Notebook</h1>
+      ) : (
+        <></>
+      )}
       <div
         className={
           notebook.length % 2 == 0

@@ -3,12 +3,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5em;
+  margin-top: 1em;
 }
 .notebook-container-odd {
   content: "";
   flex: auto;
 }
 .notebook-title {
+  margin-top: 2em;
   font-family: "Lobster", cursive;
   letter-spacing: 0.05em;
 }

@@ -11,8 +11,12 @@ const NotesForm = ({
 }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  //Validation error message for title field
   const [titleError, setTitleError] = useState("");
+  //Validation error message for Content field
   const [contentError, setContentError] = useState("");
+
+  //Set the field values according to the mode (Add/Update)
   useEffect(() => {
     if (mode == "Update") {
       setTitle(noteToBeUpdated.title);
@@ -23,26 +27,18 @@ const NotesForm = ({
     }
   }, [mode]);
 
+  //Function to validate the fields - title & content returns boolean value
   const validateInput = () => {
-    let Title = false;
-    let Content = false;
-    let alertMessage = "";
-    if (title.length == 0) Title = true;
-    if (content.length == 0) Content = true;
-    if (Title && !Content) {
+    if (title.length == 0) {
       setTitleError("Title cannot be empty");
-      alertMessage = "Title";
-    } else if (!Title && Content) {
-      alertMessage = "Content";
-      setContentError("Content cannot be empty");
-    } else if (Title && Content) {
-      alertMessage = "Title and Content";
-      setTitleError("Title cannot be empty");
+    }
+    if (content.length == 0) {
       setContentError("Content cannot be empty");
     }
-    return !Title && !Content ? true : false;
+    return title.length != 0 && content.length != 0 ? true : false;
   };
 
+  //Function to submit; Based on the mode - Add or Update
   const submit = (e) => {
     e.preventDefault();
     if (validateInput()) {
@@ -54,12 +50,14 @@ const NotesForm = ({
     }
   };
 
+  //Update the error message in realtime as the field value changes
   useEffect(() => {
     if (title.length > 0) setTitleError("");
   }, [title]);
   useEffect(() => {
     if (content.length > 0) setContentError("");
   }, [content]);
+
   return (
     <div className="note-form-container">
       <h1 className="note-form-title">
