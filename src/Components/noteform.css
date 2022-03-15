@@ -25,7 +25,7 @@ textarea {
 .note-field input[type="text"],
 textarea {
   width: 100%;
-  border: 2px solid #aaa;
+  border: 0.8px solid rgba(255, 159, 28, 0.712);
   border-radius: 4px;
   margin: 8px 0;
   outline: none;
