@@ -36,7 +36,7 @@ Tools used for development are-
 3. NotesForm is responsible with capturing the input from the user and pass it up to it's parent component
 4. Notebook recieves the notebook state and maps the notes to render the individual <b>Note</b> component
 
-<img src="./public/phera.drawio.png" />
+<img src="public/Phera.drawio.png" />
 <div style="display:flex;align-items:center; justify-content:center;"><b>☝ Component Structure</b></div>
 
 ### NotesForm
