@@ -6,8 +6,8 @@
   margin-top: 1em;
 }
 .notebook-container-odd {
-  content: "";
-  flex: auto;
+  /* content: "";
+  flex: auto; */
 }
 .notebook-title {
   margin-top: 2em;
@@ -17,11 +17,21 @@
 .note {
   position: relative;
   width: 40%;
+  min-width: 400px;
   border: 0.5px solid rgba(255, 159, 28, 0.712);
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
   transition: 0.2s;
+}
+@media (max-width: 1003px) {
+  .notebook-container {
+    justify-content: center;
+  }
+  .note {
+    min-width: none;
+    width: 80%;
+  }
 }
 .note:hover {
   transform: translateY(0.5px);

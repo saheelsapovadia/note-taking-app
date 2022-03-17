@@ -91,3 +91,12 @@ textarea:focus {
   color: red;
   font-size: 14px;
 }
+@media (max-width: 1000px) {
+  .note-field {
+    flex-direction: column;
+    align-items: center;
+  }
+  .note-form-container {
+    width: 80%;
+  }
+}
