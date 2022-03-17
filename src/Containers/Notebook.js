@@ -23,6 +23,7 @@ const Notebook = ({ notebook, updateNoteMode }) => {
               content={note.content}
               updateNoteMode={updateNoteMode}
               id={index}
+              key={index}
             />
           );
         })}
